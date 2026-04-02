@@ -1,0 +1,14 @@
+@import "../../styles/cosmic.wxss";
+
+.actions {
+  margin-top: 8rpx;
+}
+
+.btn-neon-hover {
+  opacity: 0.92;
+  transform: scale(0.99);
+}
+
+.btn-ghost-hover {
+  opacity: 0.88;
+}

@@ -1,0 +1,36 @@
+<view class="cosmic-page">
+  <view class="cosmic-inner">
+    <view class="container">
+      <text class="cosmic-title">{{title}}</text>
+      <text class="cosmic-sub">星历留痕 · 复盘摘要</text>
+
+      <block wx:if="{{items.length === 0}}">
+        <view class="empty-cosmic">
+          <text class="empty-cosmic-text">{{emptyHint}}</text>
+        </view>
+      </block>
+
+      <block wx:else>
+        <view class="list">
+          <view class="timeline-item" wx:for="{{items}}" wx:key="sessionId">
+            <text class="timeline-meta">{{item.createdAt}}</text>
+            <text class="timeline-summary">{{item.reflectionSummary}}</text>
+          </view>
+        </view>
+      </block>
+
+      <view class="footer">
+        <button
+          class="btn-ghost"
+          bindtap="onLoadMore"
+          hover-class="btn-ghost-hover"
+          type="default"
+          loading="{{loading}}"
+          disabled="{{loading}}"
+        >
+          {{loading ? "加载中..." : "加载更多"}}
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

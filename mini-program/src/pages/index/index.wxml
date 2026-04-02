@@ -1,0 +1,38 @@
+<view class="cosmic-page">
+  <view class="cosmic-inner">
+    <view class="container">
+      <view class="hero-glow">
+        <view class="hero-orbit"></view>
+        <text class="cosmic-title">{{todayInspiration}}</text>
+        <text class="cosmic-sub">星轨与符号 · 娱乐与自我反思</text>
+      </view>
+
+      <view class="actions">
+        <button
+          class="btn-neon"
+          bindtap="onChooseSpread"
+          hover-class="btn-neon-hover"
+          type="default"
+        >
+          {{chooseSpread}}
+        </button>
+        <button
+          class="btn-ghost"
+          bindtap="onStartToday"
+          hover-class="btn-ghost-hover"
+          type="default"
+        >
+          {{startPresentation}}
+        </button>
+        <button
+          class="btn-ghost"
+          bindtap="onGoHistory"
+          hover-class="btn-ghost-hover"
+          type="default"
+        >
+          {{goHistory}}
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

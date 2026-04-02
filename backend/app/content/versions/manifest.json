@@ -1,0 +1,17 @@
+{
+  "updatedAt": "2026-04-02T00:00:00Z",
+  "active": {
+    "tarotCards": "v0",
+    "spreads": "v0"
+  },
+  "gray": {
+    "enabled": false,
+    "tarotCards": [
+      { "version": "v1", "weight": 0.1 }
+    ],
+    "spreads": [
+      { "version": "v1", "weight": 0.1 }
+    ]
+  }
+}
+

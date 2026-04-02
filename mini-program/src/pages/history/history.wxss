@@ -1,0 +1,13 @@
+@import "../../styles/cosmic.wxss";
+
+.list {
+  margin-top: 32rpx;
+}
+
+.footer {
+  margin-top: 28rpx;
+}
+
+.btn-ghost-hover {
+  opacity: 0.88;
+}

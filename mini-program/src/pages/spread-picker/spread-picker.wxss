@@ -1,0 +1,9 @@
+@import "../../styles/cosmic.wxss";
+
+.footer {
+  margin-top: 48rpx;
+}
+
+.btn-neon-hover {
+  opacity: 0.92;
+}

@@ -1,0 +1,23 @@
+.wrap {
+  margin-top: 32rpx;
+  padding: 20rpx 24rpx;
+  border-radius: 20rpx;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1rpx solid rgba(250, 204, 21, 0.25);
+  box-shadow: 0 0 32rpx rgba(250, 204, 21, 0.08);
+}
+
+.glow-line {
+  height: 4rpx;
+  border-radius: 4rpx;
+  margin-bottom: 16rpx;
+  background: linear-gradient(90deg, transparent, #facc15, #a78bfa, transparent);
+  opacity: 0.85;
+}
+
+.text {
+  font-size: 22rpx;
+  color: rgba(254, 243, 199, 0.9);
+  line-height: 1.55;
+  white-space: pre-wrap;
+}

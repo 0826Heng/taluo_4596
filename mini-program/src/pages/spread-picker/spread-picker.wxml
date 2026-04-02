@@ -1,0 +1,43 @@
+<view class="cosmic-page">
+  <view class="cosmic-inner">
+    <view class="container">
+      <text class="cosmic-title">{{title}}</text>
+      <text class="cosmic-sub">选定星图与阵列，准备揭晓牌面</text>
+
+      <view class="section">
+        <text class="section-label">关注主题</text>
+        <radio-group bindchange="onThemeChange" value="{{selectedThemeId}}">
+          <label wx:for="{{themes}}" wx:key="id">
+            <view class="option-row">
+              <radio value="{{item.id}}" color="#00d4ff" />
+              <text>{{item.label}}</text>
+            </view>
+          </label>
+        </radio-group>
+      </view>
+
+      <view class="section">
+        <text class="section-label">选择牌阵</text>
+        <radio-group bindchange="onSpreadChange" value="{{selectedSpreadId}}">
+          <label wx:for="{{spreads}}" wx:key="id">
+            <view class="option-row">
+              <radio value="{{item.id}}" color="#7c3aed" />
+              <text>{{item.label}}</text>
+            </view>
+          </label>
+        </radio-group>
+      </view>
+
+      <view class="footer">
+        <button
+          class="btn-neon"
+          bindtap="onConfirm"
+          hover-class="btn-neon-hover"
+          type="default"
+        >
+          开始呈现牌面
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

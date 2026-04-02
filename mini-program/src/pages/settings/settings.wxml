@@ -1,0 +1,24 @@
+<view class="cosmic-page">
+  <view class="cosmic-inner">
+    <view class="container">
+      <text class="cosmic-title">{{title}}</text>
+      <text class="cosmic-sub">你的数据 · 由你掌控</text>
+
+      <view class="card glass-panel settings-card">
+        <text class="subtitle">{{disclaimerTitle}}</text>
+        <text class="note">{{privacyNote}}</text>
+      </view>
+
+      <view class="actions">
+        <button
+          class="btn-danger"
+          bindtap="onClearData"
+          hover-class="btn-danger-hover"
+          type="default"
+        >
+          {{clearMyData}}
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

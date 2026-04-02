@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "象征解读",
+  "navigationBarBackgroundColor": "#0a0e1a",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#050810",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "disclaimer-banner": "/src/components/DisclaimerBanner/index"
+  }
+}

@@ -1,0 +1,110 @@
+<view class="cosmic-page">
+  <view class="cosmic-inner">
+    <view class="container">
+      <view class="header">
+        <text class="cosmic-title">{{title}}</text>
+        <text class="cosmic-sub">轻触单牌翻面 · 揭晓星辰符文</text>
+      </view>
+
+      <view class="actions">
+        <button
+          class="btn-neon"
+          bindtap="onRevealAll"
+          hover-class="btn-neon-hover"
+          type="default"
+          disabled="{{revealed || isRevealing}}"
+          loading="{{isRevealing}}"
+        >
+          {{revealed ? "已布阵" : actionFlip}}
+        </button>
+      </view>
+
+      <block wx:if="{{revealed}}">
+        <view class="cards">
+          <block wx:for="{{cards}}" wx:for-item="item" wx:for-index="idx" wx:key="idx">
+            <view class="oracle-card">
+              <text class="oracle-pos">
+                位置：{{item.positionKey}}（{{item.upright ? "正位" : "逆位"}}）
+              </text>
+
+              <view
+                class="tarot-card-shell face-accent-{{item.faceAccent}} card-enter"
+                style="animation-delay: {{idx * 90}}ms;"
+              >
+                <view
+                  class="tarot-flip-scene"
+                  bindtap="onCardFlip"
+                  data-idx="{{idx}}"
+                  hover-class="tarot-flip-press"
+                >
+                  <view
+                    class="tarot-flip-pivot {{item.faceUp ? 'tarot-flip-pivot--up' : ''}}"
+                  >
+                    <!-- 牌背：奥术回路风 -->
+                    <view class="tarot-flip-face tarot-flip-face--back">
+                      <view class="tarot-card-back">
+                        <view class="tarot-back-grid"></view>
+                        <view class="tarot-back-ring"></view>
+                        <text class="tarot-back-glyph">⬡</text>
+                        <text class="tarot-back-title">封缄矩阵</text>
+                        <text class="tarot-back-sub">轻触 · 同步相位</text>
+                        <view class="tarot-back-scan"></view>
+                      </view>
+                    </view>
+                    <!-- 牌面 -->
+                    <view class="tarot-flip-face tarot-flip-face--front">
+                      <view
+                        class="tarot-card-body {{item.upright ? '' : 'tarot-card-body--reversed'}}"
+                      >
+                        <view class="tarot-card-shine"></view>
+                        <view class="tarot-card-border-inner"></view>
+                        <view class="tarot-card-corner tarot-card-corner--tl">◇</view>
+                        <view class="tarot-card-corner tarot-card-corner--tr">◇</view>
+                        <view class="tarot-card-corner tarot-card-corner--bl">◇</view>
+                        <view class="tarot-card-corner tarot-card-corner--br">◇</view>
+
+                        <text class="tarot-numeral">{{item.faceNumeral}}</text>
+                        <text class="tarot-emblem">✦</text>
+                        <text class="tarot-name">{{item.faceTitle}}</text>
+                        <text class="tarot-id">{{item.cardId}}</text>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+
+              <block wx:if="{{item.faceUp}}">
+                <text class="oracle-text">{{item.interpretation}}</text>
+              </block>
+              <block wx:else>
+                <text class="flip-hint">↓ 点击牌背进行翻面，查阅该位置的解读</text>
+              </block>
+            </view>
+          </block>
+        </view>
+      </block>
+
+      <view class="reflection glass-panel reflection-panel">
+        <text class="section-title">{{optionalReflection}}</text>
+        <textarea
+          class="cosmic-textarea"
+          value="{{reflectionText}}"
+          placeholder="记录你注意到的意象与小步行动（可选）"
+          placeholder-class="textarea-placeholder"
+          bindinput="onReflectionInput"
+        ></textarea>
+        <button
+          class="btn-ghost save-btn"
+          bindtap="onSaveReflection"
+          hover-class="btn-ghost-hover"
+          type="default"
+          loading="{{isSavingReflection}}"
+        >
+          {{ctaSaveReflection}}
+        </button>
+      </view>
+
+      <disclaimer-banner text="{{disclaimer}}" />
+    </view>
+  </view>
+</view>

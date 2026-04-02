@@ -1,0 +1,19 @@
+# Python
+backend/.venv/
+venv/
+.env
+.env.*
+*.pyc
+__pycache__/
+
+# 本地跑出来的历史（勿提交）
+data/*.jsonl
+
+# 系统与编辑器
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# 微信开发者工具（个人本地设置）
+mini-program/project.private.config.json

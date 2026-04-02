@@ -1,0 +1,15 @@
+[
+  {
+    "spread_id": "spread_three_cards",
+    "positions": ["位置1", "位置2", "位置3"]
+  },
+  {
+    "spread_id": "spread_celtic_cross",
+    "positions": ["中心", "挑战", "助力", "过去", "未来", "上方", "下方", "自我", "环境", "结果"]
+  },
+  {
+    "spread_id": "spread_single",
+    "positions": ["指引"]
+  }
+]
+

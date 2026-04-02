@@ -1,0 +1,30 @@
+@import "../../styles/cosmic.wxss";
+
+.settings-card {
+  margin-top: 36rpx;
+  padding: 28rpx 24rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #a5b4fc;
+  letter-spacing: 2rpx;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.note {
+  font-size: 26rpx;
+  color: rgba(224, 231, 255, 0.88);
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.actions {
+  margin-top: 8rpx;
+}
+
+.btn-danger-hover {
+  opacity: 0.9;
+}
